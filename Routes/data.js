@@ -1,0 +1,12 @@
+const express=require('express');
+const router=express.Router();
+const {createdata}=require("../Controller/createdata");
+ const {deletedata}=require("../Controller/deletedata");
+ const {getdata,getdataById}=require("../Controller/getdata");
+ const {updatedata}=require("../Controller/updatedata");
+ router.post("/createdata",createdata);
+ router.delete("/deletedata/:ID",deletedata);
+ router.get("/getdata",getdata);
+ router.get("/getdata/:id",getdataById);
+ router.put("/updatedata/:id",updatedata);
+ module.exports=router;
